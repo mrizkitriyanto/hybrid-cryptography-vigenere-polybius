@@ -1,6 +1,6 @@
 from application.polybius.table import plain_table, cipher_table
 
-def polybius_encryption(plaintext, plain_table):
+def polybius_encryption(plaintext):
     cipher_table_index = list()
     cipher_text= list()
     for i in range(len(plaintext)):
@@ -15,6 +15,20 @@ def polybius_encryption(plaintext, plain_table):
         cipher_text.append(c)
     return cipher_text
 
+def polybius_decryption(cipher):
+    plain_table_index = list()
+    plain_text= list()
+    for i in range(len(cipher)):
+        for j in range(len(cipher_table)):
+            if (cipher[i] == " "):
+                plain_table_index.append(26)
+                break
+            if cipher_table[j] == cipher[i]:
+                plain_table_index.append(j)
+    for k in range(len(plain_table_index)):
+        p = plain_table[plain_table_index[k]]
+        plain_text.append(p)
+    return plain_text
 
 def printer(l):
     return print("".join(l))
