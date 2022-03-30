@@ -28,7 +28,11 @@ def polybius_decryption(cipher):
     for k in range(len(plain_table_index)):
         p = plain_table[plain_table_index[k]]
         plain_text.append(p)
-    return plain_text
+    return plain_text,plain_table_index
 
 def printer(l):
     return print("".join(l))
+
+def printer_decryption(l):
+    for k in range(len(l)):
+        print(plain_table[l[k]], end="")
