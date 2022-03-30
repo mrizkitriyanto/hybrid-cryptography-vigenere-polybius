@@ -1,7 +1,4 @@
-import pyfiglet
-import sys
-
-from vigenere import *
+from application import *
 
 if __name__ == "__main__":
 
@@ -18,11 +15,15 @@ if __name__ == "__main__":
     if (choose=="1"):
         message = input("Masukkan pesan (KAPITAL dan TANPA SPASI): ")
         keyword = input("Masukkan kunci (KAPITAL dan TANPA SPASI): ")
-        key = vigenere_generate_key(keyword, len(message))
-        e_vigenere = vigenere_encryption(message, key)
-        print(e_vigenere)
+        ciphertext = hybrid_encryption(message, keyword)
+        print(ciphertext)
     elif(choose=="2"):
         print("dekripsi")
+        ciphertext = input("Masukkan ciphertext (TANPA SPASI): ")
+        keyword = input("Masukkan kunci (KAPITAL dan TANPA SPASI): ")
+
+        plaintext = hybrid_encryption(ciphertext, keyword)
+        print(plaintext)
     elif(choose=='3'):
         sys.exit("Terima Kasih \n")
     else:
