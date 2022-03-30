@@ -15,8 +15,10 @@ if __name__ == "__main__":
     if (choose=="1"):
         message = input("Masukkan pesan (KAPITAL dan TANPA SPASI): ")
         keyword = input("Masukkan kunci (KAPITAL dan TANPA SPASI): ")
-        ciphertext = hybrid_encryption(message, keyword)
-        print(ciphertext)
+
+        print("\n======== Pesan Terenkripsi ========")
+        hybrid_encryption(message, keyword)
+
     elif(choose=="2"):
         print("dekripsi")
         ciphertext = input("Masukkan ciphertext (TANPA SPASI): ")
