@@ -8,6 +8,9 @@ def polybius_encryption(plaintext):
             if (plaintext[i] == " "):
                 cipher_table_index.append(26)
                 break
+            # if (plaintext[i] == "J"):
+            #     cipher_table_index.append(9)
+            #     break
             if plain_table[j] == plaintext[i]:
                 cipher_table_index.append(j)
     for k in range(len(cipher_table_index)):
