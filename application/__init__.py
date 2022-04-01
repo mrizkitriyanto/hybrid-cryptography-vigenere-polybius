@@ -8,8 +8,6 @@ def hybrid_encryption(plain, keyword):
 
     # Step 1 - Vigenere Encryption
     e_vigenere = vigenere_encryption(plain, key)
-    # print(key)
-    # print(e_vigenere)
 
     # Step 2 - Polybius Encryption
     e_polybius= polybius_encryption(e_vigenere)
