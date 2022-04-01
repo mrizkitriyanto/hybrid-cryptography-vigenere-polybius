@@ -60,13 +60,13 @@ STEP3: OUTPUT - DMQHCQHL
 
 Phase 2 (Polybius Chiper)
 STEP4: TEXT - DMQHCQHL
-STEP5: OUTPUT - 1432412313412331
+STEP5: OUTPUT - 4123143231143213
 ```
 #### Dekripsi
 ```
 FOR LOOP len(CIPHERTEXT):
     # Phase 1 (Polybius Cipher)
-    STEP1: CIPHERTEXT - 14
+    STEP1: CIPHERTEXT - 41
     STEP2: OUTPUT - D
 
     # Phase 2 (Vigenere Chiper)
