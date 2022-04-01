@@ -25,10 +25,7 @@ def hybrid_decryption(cipher, keyword):
 
     # Step 1 - Polybius Decryption
     d_polybius, index= polybius_decryption(ciphertext_list)
-    # print(ciphertext_list)
-    # print(index)
-    # print(d_polybius)
-    # printer_decryption(index)
+   
 
     # Step 2 - Vigenere Decryption
     d_vigenere = vigenere_decryption(d_polybius, key)
